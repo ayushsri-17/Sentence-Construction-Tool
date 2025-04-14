@@ -17,7 +17,7 @@ const QuizManager = () => {
   const [quizStarted, setQuizStarted] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3001/data')
+    fetch('/db.json')
       .then(res => res.json())
       .then(data => {
         setQuestions(data.questions);
