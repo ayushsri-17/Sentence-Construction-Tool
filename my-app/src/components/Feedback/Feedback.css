@@ -1,0 +1,145 @@
+.feedback-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', sans-serif;
+}
+
+.feedback-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.feedback-header h1 {
+  color: #1e293b;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.score-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.score-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.score-label {
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.feedback-summary {
+  background-color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: #334155;
+  text-align: center;
+}
+
+.feedback-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.feedback-item {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-left: 4px solid;
+}
+
+.feedback-item.correct {
+  border-left-color: #10b981;
+}
+
+.feedback-item.incorrect {
+  border-left-color: #ef4444;
+}
+
+.question-section h3 {
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.original-sentence {
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.answer-section {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.correct-answer, .user-answer {
+  flex: 1;
+}
+
+.correct-answer h4, .user-answer h4 {
+  color: #334155;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.correct-answer p {
+  background-color: #f0fdf4;
+  padding: 0.8rem;
+  border-radius: 6px;
+  color: #065f46;
+}
+
+.user-answer p {
+  background-color: #fff1f2;
+  padding: 0.8rem;
+  border-radius: 6px;
+  color: #991b1b;
+}
+
+.status-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.feedback-item.correct .status-badge {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.feedback-item.incorrect .status-badge {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 768px) {
+  .feedback-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .answer-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
