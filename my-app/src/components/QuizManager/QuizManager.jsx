@@ -20,11 +20,17 @@ const QuizManager = () => {
     fetch('/db.json')
       .then(res => res.json())
       .then(data => {
-        setQuestions(data.questions);
-        setAnswers(Array(data.questions.length).fill(null));
+        const fetchedQuestions = data?.data?.questions;
+        if (!fetchedQuestions || !Array.isArray(fetchedQuestions)) {
+          console.error("Questions not found in the expected format");
+          return;
+        }
+        setQuestions(fetchedQuestions);
+        setAnswers(Array(fetchedQuestions.length).fill(null));
       })
       .catch(error => console.error("Error fetching questions:", error));
   }, []);
+  
 
   useEffect(() => {
     if (showFeedback || !quizStarted) return;
