@@ -53,7 +53,7 @@ function Question({ question, onAnswer, answers }) {
 
       <div className="options">
         {options.map((option, index) => (
-          <button
+          <button 
             key={index}
             onClick={() => handleSelect(option)}
             disabled={selected.includes(option)}

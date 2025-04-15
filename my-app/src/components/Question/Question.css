@@ -75,8 +75,8 @@
 
 .options button {
   padding: 0.6rem 1.2rem;
-  background-color: #e2e8f0;
-  color: #334155;
+  background-color: rgb(231, 229, 229);
+  color: black;
   border: none;
   border-radius: 6px;
   font-size: 0.95rem;
@@ -86,11 +86,11 @@
 }
 
 .options button:hover {
-  background-color: #cbd5e1;
+  background-color: #a4a8ad;
 }
 
 .options button:disabled {
-  background-color: #94a3b8;
+  background-color: #b4b4b5;
   color: white;
   cursor: not-allowed;
 }
@@ -118,6 +118,19 @@
   background-color: #c7d2fe;
   cursor: not-allowed;
 }
+
+.next-button{
+  height: 40px;
+  width: 60px;
+  border: none;
+  background-color: #453FE1;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+
 
 
 @media (max-width: 768px) {

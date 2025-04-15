@@ -89,7 +89,7 @@ const QuizManager = () => {
             onClick={handleNext} 
             disabled={!allFilled}
           >
-            {currentIndex === questions.length - 1 ? 'Submit' : 'Next'}
+            {currentIndex === questions.length - 1 ? 'Submit' : '-->'}
           </button>
         </>
       )}
